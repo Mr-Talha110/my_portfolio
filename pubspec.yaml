@@ -35,6 +35,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -59,8 +60,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -74,10 +76,34 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: satoshi-black
+      fonts:
+        - asset: assets/fonts/Satoshi-Black.otf
+    - family: satoshi-black-italic
+      fonts:
+        - asset: assets/fonts/Satoshi-BlackItalic.otf
+    - family: satoshi-bold
+      fonts:
+        - asset: assets/fonts/Satoshi-Bold.otf
+    - family: satoshi-italic
+      fonts:
+        - asset: assets/fonts/Satoshi-Italic.otf
+    - family: satoshi-light
+      fonts:
+        - asset: assets/fonts/Satoshi-Light.otf
+    - family: satoshi-light-italic
+      fonts:
+        - asset: assets/fonts/Satoshi-LightItalic.otf
+    - family: satoshi-medium
+      fonts:
+        - asset: assets/fonts/Satoshi-Medium.otf
+    - family: satoshi-medium-italic
+      fonts:
+        - asset: assets/fonts/Satoshi-MediumItalic.otf
+    - family: satoshi-regular
+      fonts:
+        - asset: assets/fonts/Satoshi-Regular.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/services/constants.dart';
 import 'package:my_portfolio/web/home/screens/home_screen.dart';
 
 void main() {
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
+        // fontFamily: AppFonts.satoshiRegular,
+        useMaterial3: false,
+        colorScheme:
+            ColorScheme.fromSwatch().copyWith(secondary: AppColors.brownColor),
       ),
       home: const HomeScreen(),
     );
