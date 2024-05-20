@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: AppFonts.satoshiRegular,
+        fontFamily: 'satoshi-black',
         useMaterial3: false,
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: AppColors.brownColor),
