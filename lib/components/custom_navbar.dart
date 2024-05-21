@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_portfolio/services/app_strings.dart';
-import 'package:my_portfolio/services/constants.dart';
+import 'package:my_portfolio/constants/web_strings.dart';
+import 'package:my_portfolio/constants/constants.dart';
 
 class CustomNavbar extends StatelessWidget {
   const CustomNavbar({super.key});
@@ -21,8 +21,8 @@ class CustomNavbar extends StatelessWidget {
                   top: 12, bottom: 12, right: 12, left: 24),
               decoration: BoxDecoration(
                   border:
-                      Border.all(color: AppColors.brownColor.withOpacity(0.15)),
-                  color: AppColors.brownColor.withOpacity(0.05),
+                      Border.all(color: WebColors.brownColor.withOpacity(0.15)),
+                  color: WebColors.brownColor.withOpacity(0.05),
                   borderRadius: BorderRadius.circular(2)),
               child: Row(
                 children: [
@@ -31,13 +31,13 @@ class CustomNavbar extends StatelessWidget {
                   Row(
                     children: [
                       ...List.generate(
-                        AppStrings.navBarList.length,
+                        WebStrings.navBarList.length,
                         (index) => Padding(
                           padding: const EdgeInsets.only(left: 20),
                           child: Text(
-                            AppStrings.navBarList[index],
+                            WebStrings.navBarList[index],
                             style: TextStyle(
-                                color: AppColors.brownColor,
+                                color: WebColors.brownColor,
                                 fontSize: 13,
                                 // fontFamily: AppFonts.satoshiBold,
                                 fontWeight: FontWeight.w400),
@@ -51,7 +51,7 @@ class CustomNavbar extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 16),
                     decoration: BoxDecoration(
-                        color: AppColors.brownColor,
+                        color: WebColors.brownColor,
                         borderRadius: BorderRadius.circular(2)),
                     child: const Text(
                       'LET\'S TALK',

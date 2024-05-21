@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   flutter_svg: ^2.0.10+1
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
@@ -61,6 +62,7 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
+    - assets/icons/
 
   #   - images/a_dot_ham.jpeg
 
@@ -76,15 +78,42 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Inter
+    - family: satoshi-black
       fonts:
-        - asset: assets/fonts/Inter-Regular.ttf
-        - asset: assets/fonts/Inter-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/Inter-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/Inter-Bold.ttf
-          weight: 700
+        - asset: assets/fonts/Satoshi-Black.otf
+    - family: satoshi-black-italic
+      fonts:
+        - asset: assets/fonts/Satoshi-BlackItalic.otf
+    - family: satoshi-bold
+      fonts:
+        - asset: assets/fonts/Satoshi-Bold.otf
+    - family: satoshi-italic
+      fonts:
+        - asset: assets/fonts/Satoshi-Italic.otf
+    - family: satoshi-light
+      fonts:
+        - asset: assets/fonts/Satoshi-Light.otf
+    - family: satoshi-light-itlalic
+      fonts:
+        - asset: assets/fonts/Satoshi-LightItalic.otf
+    - family: satoshi-medium
+      fonts:
+        - asset: assets/fonts/Satoshi-Medium.otf
+    - family: satoshi-medium-italic
+      fonts:
+        - asset: assets/fonts/Satoshi-MediumItalic.otf
+    - family: satoshi-regular
+      fonts:
+        - asset: assets/fonts/Satoshi-Regular.otf
+    - family: chillax-light
+      fonts:
+        - asset: assets/fonts/Chillax-Light.otf
+    - family: chillax-medium
+      fonts:
+        - asset: assets/fonts/Chillax-Medium.otf
+    - family: chillax-regular
+      fonts:
+        - asset: assets/fonts/Chillax-Regular.otf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
