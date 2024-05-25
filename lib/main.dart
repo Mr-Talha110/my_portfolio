@@ -16,10 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: WebFonts.satoshiRegular,
         useMaterial3: false,
-        colorScheme:
-            ColorScheme.fromSwatch().copyWith(secondary: WebColors.brownColor),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

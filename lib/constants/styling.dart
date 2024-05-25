@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/constants.dart';
+import 'package:my_portfolio/constants/sizes.dart';
 
 class TextStyling {
-  static TextStyle mainHeadingStyle = TextStyle(
-      height: 0.8,
-      color: WebColors.brownColor,
-      fontFamily: WebFonts.satoshiLight,
-      fontSize: 160,
-      fontWeight: FontWeight.w300);
-  static TextStyle mainHeadingDescpStyle = TextStyle(
-      color: WebColors.brownColor.withOpacity(0.60),
-      fontFamily: WebFonts.chillaxRegular,
-      fontSize: 24,
-      height: 0.9,
-      fontWeight: FontWeight.w300);
-  static TextStyle numberingStyle = TextStyle(
-      color: WebColors.brownColor.withOpacity(0.60),
+  static const TextStyle navBarText = TextStyle(
+      color: WebColors.grey,
+      fontFamily: WebFonts.satoshiMedium,
+      fontSize: WebSize.s18,
+      fontWeight: FontWeight.w500);
+  static const TextStyle orangeSmallText = TextStyle(
+      color: WebColors.orange,
       fontFamily: WebFonts.satoshiRegular,
-      fontSize: 13,
-      fontWeight: FontWeight.w400);
-  static TextStyle subHeading1 = TextStyle(
-      color: WebColors.brownColor,
+      fontSize: WebSize.s24,
+      fontWeight: FontWeight.w500);
+  static const TextStyle blueText = TextStyle(
+      color: WebColors.blueish,
+      fontFamily: WebFonts.satoshiMedium,
+      fontSize: WebSize.s72,
+      fontWeight: FontWeight.w900);
+  static const TextStyle blueTextHome = TextStyle(
+      color: WebColors.blueish,
       fontFamily: WebFonts.satoshiRegular,
-      fontSize: 24,
-      fontWeight: FontWeight.w300);
-  static TextStyle subHeading2 = TextStyle(
-      color: WebColors.brownColor.withOpacity(0.60),
-      fontFamily: WebFonts.chillaxRegular,
-      fontSize: 16,
+      fontSize: WebSize.s36,
+      fontWeight: FontWeight.w700);
+  static const TextStyle descpText = TextStyle(
+      color: WebColors.mediumGrey,
+      fontFamily: WebFonts.satoshiRegular,
+      fontSize: WebSize.s18,
       fontWeight: FontWeight.w400);
 }

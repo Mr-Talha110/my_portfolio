@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
 
 class WebColors {
-  static Color black = Colors.black;
-  static Color white = Colors.white;
-  static Color brownColor = const Color(0xffdac5a7);
+  static const Color black = Colors.black;
+  static const Color white = Colors.white;
+  static const Color grey = Color(0xff46434E);
+  static const Color blueish = Color(0xff45577B);
+  static const Color lightgGrey = Color(0xffE0E0E0);
+  static const Color orange = Color(0xffE6813E);
+  static const Color mediumGrey = Color(0xff7C808B);
+  static const Color baseGrey = Color(0xffE0E0E0);
+  static const Color transparent = Colors.transparent;
 }
 
 class AssetRef {
-  static const String logo = 'assets/images/logo.svg';
-  static const String person = 'assets/images/person.png';
-
-  static const List<String> clientLogos = [
-    'assets/images/logo1.png',
-    'assets/images/logo2.png',
-    'assets/images/logo3.png',
-    'assets/images/logo4.png',
-    'assets/images/logo5.png',
-    'assets/images/logo6.png',
-  ];
+  static const String logo = 'assets/images/logo.png';
+  static const String illustration = 'assets/images/illustration.png';
 }
 
 class WebIcons {
   static const String arrowIcon = 'assets/icons/arrow.svg';
+  static const String downloadIcon = 'assets/icons/download.svg';
+  static const List<String> socialIcons = [
+    'assets/icons/linkedin.svg',
+    'assets/icons/github.svg',
+    'assets/icons/web.svg',
+  ];
 }
 
 class WebFonts {
