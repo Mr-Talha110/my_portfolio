@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/sizes.dart';
-import 'package:my_portfolio/pages/home/components/custom_navbar.dart';
 import 'package:my_portfolio/constants/constants.dart';
-import 'package:my_portfolio/pages/home/components/section2.dart';
-import '../components/section1.dart';
 import '../provider/home_controller.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -35,9 +32,6 @@ class HomeScreen extends StatelessWidget {
                   child: const Column(
                     children: [
                       SizedBox(height: WebSize.s48),
-                      CustomNavbar(),
-                      Section1(),
-                      Section2(),
                     ],
                   ),
                 ),
