@@ -8,6 +8,7 @@ class WebStrings {
     'PAGES'
   ];
   static const String mainHeading = 'App Designer\n& Developer';
+  static const String letsTalk = 'LET\'S TALK';
   static const String mainHeadingDescp =
       'Premium app design, development, and SEO\nservices to help your business stand out.';
 }

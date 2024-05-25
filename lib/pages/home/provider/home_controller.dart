@@ -1,8 +1,6 @@
-import 'package:get/get.dart';
+import '../models/content_box_model.dart';
 
-import '../../../models/content_box_model.dart';
-
-class HomeController extends GetxController {
+class HomeController {
   final List<ContentBoxModel> boxList = [
     ContentBoxModel(
         btnText: 'About Appdesign',

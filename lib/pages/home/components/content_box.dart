@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/constants/constants.dart';
 import 'package:my_portfolio/constants/styling.dart';
-import 'package:my_portfolio/models/content_box_model.dart';
+import '../models/content_box_model.dart';
 
 class ContentBox extends StatelessWidget {
   final ContentBoxModel contentBox;
