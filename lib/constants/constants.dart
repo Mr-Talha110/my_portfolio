@@ -11,6 +11,7 @@ class WebColors {
   static const Color darkGrey = Color(0xff434343);
   static const Color baseGrey = Color(0xffE0E0E0);
   static const Color light = Color(0xffF2F3F2);
+  static const Color dividerGrey = Color(0xff7A8391);
   static const Color transparent = Colors.transparent;
 }
 
@@ -25,6 +26,7 @@ class WebIcons {
   static const String downloadIcon = 'assets/icons/download.svg';
   static const String pcIcon = 'assets/icons/pc.svg';
   static const String brushIcon = 'assets/icons/brush.svg';
+  static const String emailIcon = 'assets/icons/email.svg';
   static const List<String> socialIcons = [
     'assets/icons/linkedin.svg',
     'assets/icons/github.svg',

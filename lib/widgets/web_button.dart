@@ -11,9 +11,11 @@ class WebButton extends StatelessWidget {
   final bool noElevation;
   final bool isIcon;
   final String? icon;
+  final Color? borderColor;
   const WebButton(
       {super.key,
       this.icon,
+      this.borderColor,
       this.bgColor,
       this.isIcon = false,
       this.title,
@@ -25,6 +27,8 @@ class WebButton extends StatelessWidget {
     return ElevatedButton(
       style: ButtonStyle(
           elevation: WidgetStatePropertyAll(noElevation ? 0 : 1.0),
+          side: WidgetStatePropertyAll(
+              BorderSide(color: borderColor ?? WebColors.transparent)),
           shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(WebSize.s6),

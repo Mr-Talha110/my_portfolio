@@ -38,4 +38,9 @@ class TextStyling {
       fontFamily: WebFonts.satoshiMedium,
       fontSize: WebSize.s24,
       fontWeight: FontWeight.w500);
+  static const TextStyle lightBoldText = TextStyle(
+      color: WebColors.light,
+      fontFamily: WebFonts.satoshiBold,
+      fontSize: WebSize.s36,
+      fontWeight: FontWeight.w900);
 }

@@ -26,4 +26,8 @@ class WebStrings {
   static const String uiDesigner = 'UI/UX\nDesigner';
   static const String uiDesignerDescp =
       'I look at every UI design project as a process in solving a problem. I am considering all the aspects until the UI design is “work”.';
+  static const String interestedWorking = 'Interested working with me?';
+  static const String seeProjects = 'See Projects';
+  static const String emailMe = 'Email Me';
+  static const String rightsReserved = '2024 portfolio. All rights reserved.';
 }
