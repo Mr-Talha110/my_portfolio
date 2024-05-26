@@ -12,17 +12,22 @@ class AboutSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
       desktop: (_) => const AboutSectionDesktop(),
+      mobile: (_) => const AboutSectionDesktop(
+        isMobile: true,
+      ),
     );
   }
 }
 
 class AboutSectionDesktop extends StatelessWidget {
-  const AboutSectionDesktop({super.key});
+  final bool isMobile;
+  const AboutSectionDesktop({super.key, this.isMobile = false});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: WebSize.s104),
+      alignment: Alignment.center,
+      margin: EdgeInsets.symmetric(horizontal: isMobile ? 0 : WebSize.s104),
       padding: const EdgeInsets.symmetric(
           horizontal: WebSize.s40, vertical: WebSize.s72),
       decoration: const BoxDecoration(

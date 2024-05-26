@@ -15,9 +15,8 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           children: const [
             NavBar(),
-            SizedBox(height: WebSize.s80),
             IntroSection(),
-            SizedBox(height: WebSize.s160),
+            // SizedBox(height: WebSize.s160),
             AboutSection(),
             SizedBox(height: WebSize.s160),
           ],

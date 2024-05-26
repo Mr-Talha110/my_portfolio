@@ -42,7 +42,8 @@ class NavBarDesktop extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(WebSize.s40))),
         )
       ],
-    ).paddingHorizontalTop(horizontal: WebSize.s104, top: WebSize.s50);
+    ).paddingHorizontalTopBottom(
+        horizontal: WebSize.s104, top: WebSize.s50, bottom: WebSize.s80);
   }
 }
 
