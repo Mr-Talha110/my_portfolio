@@ -115,6 +115,14 @@ class IntroSectionMobile extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Align(
+          alignment: Alignment.center,
+          child: Image.asset(
+            AssetRef.avatar,
+            width: WebSize.s370,
+          ),
+        ),
+        const SizedBox(height: WebSize.s24),
         Text(
           WebStrings.hiIamTalha,
           style: TextStyling.orangeSmallText.copyWith(
@@ -161,6 +169,6 @@ class IntroSectionMobile extends StatelessWidget {
         ),
       ],
     ).paddingHorizontalTopBottom(
-        top: WebSize.s24, horizontal: WebSize.s24, bottom: WebSize.s32);
+        top: WebSize.s80, horizontal: WebSize.s24, bottom: WebSize.s32);
   }
 }

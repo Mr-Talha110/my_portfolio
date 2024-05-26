@@ -14,9 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: WebFonts.satoshiRegular,
-        useMaterial3: false,
-      ),
+          fontFamily: WebFonts.satoshiRegular,
+          useMaterial3: false,
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(secondary: WebColors.white)),
       home: const HomeScreen(),
     );
   }

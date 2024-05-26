@@ -27,7 +27,10 @@ class AboutSectionDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      margin: EdgeInsets.symmetric(horizontal: isMobile ? 0 : WebSize.s104),
+      margin: EdgeInsets.only(
+          left: isMobile ? 0 : WebSize.s104,
+          right: isMobile ? 0 : WebSize.s104,
+          bottom: WebSize.s32),
       padding: const EdgeInsets.symmetric(
           horizontal: WebSize.s40, vertical: WebSize.s72),
       decoration: const BoxDecoration(

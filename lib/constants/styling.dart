@@ -28,4 +28,14 @@ class TextStyling {
       fontFamily: WebFonts.satoshiRegular,
       fontSize: WebSize.s18,
       fontWeight: FontWeight.w400);
+  static const TextStyle greyDescpText = TextStyle(
+      color: WebColors.darkGrey,
+      fontFamily: WebFonts.satoshiMedium,
+      fontSize: WebSize.s20,
+      fontWeight: FontWeight.w500);
+  static const TextStyle blueTitleText = TextStyle(
+      color: WebColors.blueish,
+      fontFamily: WebFonts.satoshiMedium,
+      fontSize: WebSize.s24,
+      fontWeight: FontWeight.w500);
 }
