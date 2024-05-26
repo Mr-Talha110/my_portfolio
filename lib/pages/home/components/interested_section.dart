@@ -81,11 +81,9 @@ class InterestedSectionMobile extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(WebSize.s12))),
       child: Wrap(
         children: [
-          const Expanded(
-            child: Text(
-              WebStrings.interestedWorking,
-              style: TextStyling.lightBoldText,
-            ),
+          const Text(
+            WebStrings.interestedWorking,
+            style: TextStyling.lightBoldText,
           ).paddingBottom(WebSize.s32),
           const SizedBox(height: WebSize.s10),
           const Row(
