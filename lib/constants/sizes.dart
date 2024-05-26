@@ -51,7 +51,9 @@ class WebSize {
   static const double s102 = 102.0;
   static const double s104 = 104.0;
   static const double s160 = 160.0;
+  static const double s280 = 280.0;
   static const double s370 = 370.0;
+  static const double s474 = 474.0;
   static const double s500 = 500.0;
   static const double s880 = 880.0;
   static const double s1920 = 1920.0;

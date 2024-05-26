@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/constants.dart';
+import 'package:my_portfolio/constants/extensions/padding.dart';
 import 'package:my_portfolio/constants/sizes.dart';
 import 'package:my_portfolio/constants/styling.dart';
 import 'package:my_portfolio/constants/web_strings.dart';
@@ -13,22 +14,30 @@ class ServicesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
       desktop: (_) => const ServicesSectionDesktop(),
+      mobile: (_) => const ServicesSectionDesktop(
+        isMobile: true,
+      ),
     );
   }
 }
 
 class ServicesSectionDesktop extends StatelessWidget {
-  const ServicesSectionDesktop({super.key});
+  final bool isMobile;
+  const ServicesSectionDesktop({super.key, this.isMobile = false});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(
-          left: WebSize.s104, right: WebSize.s104, bottom: WebSize.s32),
+      margin: EdgeInsets.only(
+          left: isMobile ? WebSize.s24 : WebSize.s104,
+          right: isMobile ? WebSize.s24 : WebSize.s104,
+          bottom: WebSize.s32),
       padding: const EdgeInsets.symmetric(vertical: WebSize.s48),
-      child: Row(
+      child: Wrap(
+        alignment: WrapAlignment.spaceBetween,
         children: [
-          Expanded(
+          SizedBox(
+            width: WebSize.s474,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -52,17 +61,24 @@ class ServicesSectionDesktop extends StatelessWidget {
                 )
               ],
             ),
-          ),
-          const Spacer(),
-          const ServiceBox(
-              descp: WebStrings.appDeveloperDescp,
-              title: WebStrings.appDeveloper,
-              icon: WebIcons.pcIcon),
-          const SizedBox(width: WebSize.s40),
-          const ServiceBox(
-              descp: WebStrings.uiDesignerDescp,
-              title: WebStrings.uiDesigner,
-              icon: WebIcons.brushIcon)
+          ).paddingBottom(WebSize.s50),
+          Visibility(
+              visible: !isMobile, child: const SizedBox(width: WebSize.s68)),
+          const Expanded(
+            child: Wrap(
+              children: [
+                ServiceBox(
+                    descp: WebStrings.appDeveloperDescp,
+                    title: WebStrings.appDeveloper,
+                    icon: WebIcons.pcIcon),
+                SizedBox(width: WebSize.s40),
+                ServiceBox(
+                    descp: WebStrings.uiDesignerDescp,
+                    title: WebStrings.uiDesigner,
+                    icon: WebIcons.brushIcon)
+              ],
+            ),
+          )
         ],
       ),
     );

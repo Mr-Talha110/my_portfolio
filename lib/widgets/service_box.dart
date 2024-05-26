@@ -16,12 +16,15 @@ class ServiceBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Material(
-        elevation: 5.0,
-        child: Stack(
-          children: [
-            Container(
+    return Stack(
+      children: [
+        Container(
+          width: WebSize.s280,
+          padding: const EdgeInsets.symmetric(vertical: WebSize.s30),
+          child: Material(
+            elevation: 5.0,
+            borderRadius: const BorderRadius.all(Radius.circular(WebSize.s32)),
+            child: Container(
               decoration: BoxDecoration(
                   color: WebColors.white,
                   borderRadius: BorderRadius.circular(WebSize.s32)),
@@ -45,16 +48,16 @@ class ServiceBox extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(
-              left: WebSize.s4,
-              child: SvgPicture.asset(
-                icon,
-                width: WebSize.s64,
-              ),
-            ),
-          ],
+          ),
         ),
-      ),
+        Positioned(
+          left: WebSize.s30,
+          child: SvgPicture.asset(
+            icon,
+            width: WebSize.s64,
+          ),
+        ),
+      ],
     );
   }
 }
