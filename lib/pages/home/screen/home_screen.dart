@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/constants.dart';
 import 'package:my_portfolio/constants/sizes.dart';
 import 'package:my_portfolio/pages/home/components/about_section.dart';
+import 'package:my_portfolio/pages/home/components/blogs_section.dart';
 import 'package:my_portfolio/pages/home/components/footer.dart';
 import 'package:my_portfolio/pages/home/components/interested_section.dart';
 import 'package:my_portfolio/pages/home/components/intro_section.dart';
@@ -24,6 +25,7 @@ class HomeScreen extends StatelessWidget {
                 IntroSection(),
                 AboutSection(),
                 ServicesSection(),
+                BlogsSection(),
                 InterestedSection(),
                 Footer()
               ],

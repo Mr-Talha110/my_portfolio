@@ -30,4 +30,12 @@ class WebStrings {
   static const String seeProjects = 'See Projects';
   static const String emailMe = 'Email Me';
   static const String rightsReserved = '2024 portfolio. All rights reserved.';
+  static const String fintMyLatestWriting =
+      'Find the latest of my writing here';
+  static const String seeFullBlog = 'See the full blog';
+  static const String makeMaintainWork =
+      'Make Maintainable Workarounds with Codegen';
+  static const String userEffect = 'useEffect vs useLayoutEffect';
+  static const String reactHooks =
+      'React Hooks: What’s Going to Happen to Render Props?';
 }

@@ -19,6 +19,9 @@ class AssetRef {
   static const String logo = 'assets/images/logo.png';
   static const String illustration = 'assets/images/illustration.png';
   static const String avatar = 'assets/images/avatar.png';
+  static const String image1 = 'assets/images/image1.png';
+  static const String image2 = 'assets/images/image2.png';
+  static const String image3 = 'assets/images/image3.png';
 }
 
 class WebIcons {
@@ -27,6 +30,7 @@ class WebIcons {
   static const String pcIcon = 'assets/icons/pc.svg';
   static const String brushIcon = 'assets/icons/brush.svg';
   static const String emailIcon = 'assets/icons/email.svg';
+  static const String rightCircleIcon = 'assets/icons/right-circle.svg';
   static const List<String> socialIcons = [
     'assets/icons/linkedin.svg',
     'assets/icons/github.svg',

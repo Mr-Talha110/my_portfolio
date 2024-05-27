@@ -64,19 +64,35 @@ class ServicesSectionDesktop extends StatelessWidget {
           ).paddingBottom(WebSize.s50),
           Visibility(
               visible: !isMobile, child: const SizedBox(width: WebSize.s68)),
-          const Wrap(
-            children: [
-              ServiceBox(
-                  descp: WebStrings.appDeveloperDescp,
-                  title: WebStrings.appDeveloper,
-                  icon: WebIcons.pcIcon),
-              SizedBox(width: WebSize.s40),
-              ServiceBox(
-                  descp: WebStrings.uiDesignerDescp,
-                  title: WebStrings.uiDesigner,
-                  icon: WebIcons.brushIcon)
-            ],
-          )
+          isMobile
+              ? const Align(
+                  alignment: Alignment.center,
+                  child: Wrap(
+                    children: [
+                      ServiceBox(
+                          descp: WebStrings.appDeveloperDescp,
+                          title: WebStrings.appDeveloper,
+                          icon: WebIcons.pcIcon),
+                      ServiceBox(
+                          descp: WebStrings.uiDesignerDescp,
+                          title: WebStrings.uiDesigner,
+                          icon: WebIcons.brushIcon)
+                    ],
+                  ),
+                )
+              : const Wrap(
+                  children: [
+                    ServiceBox(
+                        descp: WebStrings.appDeveloperDescp,
+                        title: WebStrings.appDeveloper,
+                        icon: WebIcons.pcIcon),
+                    SizedBox(width: WebSize.s40),
+                    ServiceBox(
+                        descp: WebStrings.uiDesignerDescp,
+                        title: WebStrings.uiDesigner,
+                        icon: WebIcons.brushIcon)
+                  ],
+                )
         ],
       ),
     );

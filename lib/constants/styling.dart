@@ -43,4 +43,9 @@ class TextStyling {
       fontFamily: WebFonts.satoshiBold,
       fontSize: WebSize.s36,
       fontWeight: FontWeight.w900);
+  static const TextStyle orangeLightText = TextStyle(
+      color: WebColors.orange,
+      fontFamily: WebFonts.satoshiRegular,
+      fontSize: WebSize.s18,
+      fontWeight: FontWeight.w500);
 }
