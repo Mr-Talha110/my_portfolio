@@ -73,6 +73,7 @@ class ServicesSectionDesktop extends StatelessWidget {
                           descp: WebStrings.appDeveloperDescp,
                           title: WebStrings.appDeveloper,
                           icon: WebIcons.pcIcon),
+                      SizedBox(width: WebSize.s10),
                       ServiceBox(
                           descp: WebStrings.uiDesignerDescp,
                           title: WebStrings.uiDesigner,
