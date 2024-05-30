@@ -30,7 +30,7 @@ class Blog extends StatelessWidget {
         children: [
           Image.asset(blog.image, width: WebSize.s370),
           const SizedBox(height: WebSize.s32),
-          Text(
+          SelectableText(
             blog.title,
             style: TextStyling.navBarText.copyWith(
               color: WebColors.dividerGrey,
@@ -38,7 +38,7 @@ class Blog extends StatelessWidget {
             ),
           ),
           const SizedBox(height: WebSize.s8),
-          Text(
+          SelectableText(
             blog.description,
             style: TextStyling.blueTitleText.copyWith(
               color: WebColors.grey,

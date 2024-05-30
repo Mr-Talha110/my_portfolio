@@ -36,12 +36,12 @@ class ServiceBox extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  SelectableText(
                     title,
                     style: TextStyling.blueTitleText,
                   ),
                   const SizedBox(height: WebSize.s24),
-                  Text(
+                  SelectableText(
                     descp,
                     style: TextStyling.descpText,
                   )

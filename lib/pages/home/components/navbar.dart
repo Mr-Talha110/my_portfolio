@@ -32,13 +32,13 @@ class NavBarDesktop extends StatelessWidget {
         ),
         const Spacer(),
         HoverAnimation(builder: (isHovered) {
-          return Text(WebStrings.blog,
+          return SelectableText(WebStrings.blog,
               style: TextStyling.navBarText.copyWith(
                   color: isHovered ? WebColors.orange : WebColors.grey));
         }),
         const SizedBox(width: WebSize.s40),
         HoverAnimation(builder: (isHovered) {
-          return Text(WebStrings.projects,
+          return SelectableText(WebStrings.projects,
               style: TextStyling.navBarText.copyWith(
                   color: isHovered ? WebColors.orange : WebColors.grey));
         }),

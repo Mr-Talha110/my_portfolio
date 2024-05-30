@@ -34,7 +34,7 @@ class FooterDesktop extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              SelectableText(
                 WebStrings.rightsReserved,
                 style:
                     TextStyling.descpText.copyWith(color: WebColors.darkGrey),
@@ -72,7 +72,7 @@ class FooterMobile extends StatelessWidget {
           const SizedBox(height: WebSize.s32),
           Wrap(
             children: [
-              Text(
+              SelectableText(
                 WebStrings.rightsReserved,
                 style:
                     TextStyling.descpText.copyWith(color: WebColors.darkGrey),

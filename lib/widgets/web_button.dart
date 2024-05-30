@@ -47,7 +47,7 @@ class WebButton extends StatelessWidget {
                   const SizedBox(width: WebSize.s6)
                 ],
               )),
-          Text(title ?? '',
+          SelectableText(title ?? '',
               style: TextStyling.descpText
                   .copyWith(color: textColor ?? WebColors.white)),
         ],

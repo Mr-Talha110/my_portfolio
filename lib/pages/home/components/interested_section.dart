@@ -36,7 +36,7 @@ class InterestedSectionDesktop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: Text(
+            child: SelectableText(
               WebStrings.interestedWorking,
               style: TextStyling.lightBoldText,
             ),
@@ -81,7 +81,7 @@ class InterestedSectionMobile extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(WebSize.s12))),
       child: Wrap(
         children: [
-          const Text(
+          const SelectableText(
             WebStrings.interestedWorking,
             style: TextStyling.lightBoldText,
           ).paddingBottom(WebSize.s32),

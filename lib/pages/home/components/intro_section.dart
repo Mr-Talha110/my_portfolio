@@ -38,11 +38,11 @@ class IntroSectionDesktop extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                const SelectableText(
                   WebStrings.hiMsg,
                   style: TextStyling.orangeSmallText,
                 ),
-                const Text(
+                const SelectableText(
                   WebStrings.talha,
                   style: TextStyling.blueText,
                 ),
@@ -72,12 +72,12 @@ class IntroSectionDesktop extends StatelessWidget {
             child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                SelectableText(
                   WebStrings.homeDescp,
                   style: TextStyling.blueTextHome,
                 ),
                 SizedBox(height: WebSize.s32),
-                Text(
+                SelectableText(
                   WebStrings.homeDescpDetails,
                   style: TextStyling.descpText,
                 ),
@@ -123,18 +123,18 @@ class IntroSectionMobile extends StatelessWidget {
           ),
         ),
         const SizedBox(height: WebSize.s24),
-        Text(
+        SelectableText(
           WebStrings.hiIamTalha,
           style: TextStyling.orangeSmallText.copyWith(
               fontSize: WebSize.s20, fontFamily: WebFonts.satoshiMedium),
         ),
         const SizedBox(height: WebSize.s16),
-        Text(
+        SelectableText(
           WebStrings.homeDescp,
           style: TextStyling.blueTextHome.copyWith(fontSize: WebSize.s30),
         ),
         const SizedBox(height: WebSize.s32),
-        const Text(
+        const SelectableText(
           WebStrings.homeDescpDetails,
           style: TextStyling.descpText,
         ),

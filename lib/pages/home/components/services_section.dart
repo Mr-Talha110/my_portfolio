@@ -41,21 +41,21 @@ class ServicesSectionDesktop extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(WebStrings.services,
+                SelectableText(WebStrings.services,
                     style: TextStyling.orangeSmallText
                         .copyWith(fontSize: WebSize.s18)),
                 const SizedBox(height: WebSize.s8),
-                const Text(
+                const SelectableText(
                   WebStrings.bestSolution,
                   style: TextStyling.blueTextHome,
                 ),
                 const SizedBox(height: WebSize.s32),
-                const Text(
+                const SelectableText(
                   WebStrings.areYourPro,
                   style: TextStyling.descpText,
                 ),
                 const SizedBox(height: WebSize.s8),
-                const Text(
+                const SelectableText(
                   WebStrings.rightPlace,
                   style: TextStyling.greyDescpText,
                 )

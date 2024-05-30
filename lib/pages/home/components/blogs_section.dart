@@ -53,7 +53,7 @@ class BlogSectionDesktop extends StatelessWidget {
                   noMargin: isMobile,
                   blog: blogs[index],
                   isLastElement: index == blogs.length - 1,
-                ),
+                ).paddingAll(WebSize.s10),
               )
             ],
           ),
@@ -86,9 +86,10 @@ List<Widget> blogChildren() {
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(WebStrings.blog, style: TextStyling.orangeLightText),
+        const SelectableText(WebStrings.blog,
+            style: TextStyling.orangeLightText),
         const SizedBox(height: WebSize.s8),
-        const Text(WebStrings.fintMyLatestWriting,
+        const SelectableText(WebStrings.fintMyLatestWriting,
                 style: TextStyling.blueTextHome)
             .paddingBottom(WebSize.s24)
       ],
@@ -96,7 +97,8 @@ List<Widget> blogChildren() {
     Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        const Text(WebStrings.seeFullBlog, style: TextStyling.orangeLightText),
+        const SelectableText(WebStrings.seeFullBlog,
+            style: TextStyling.orangeLightText),
         const SizedBox(width: WebSize.s12),
         SvgPicture.asset(WebIcons.rightCircleIcon, width: WebSize.s20),
       ],
