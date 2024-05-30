@@ -4,6 +4,7 @@ import 'package:my_portfolio/constants/extensions/padding.dart';
 import 'package:my_portfolio/constants/sizes.dart';
 import 'package:my_portfolio/constants/styling.dart';
 import 'package:my_portfolio/constants/web_strings.dart';
+import 'package:my_portfolio/widgets/hover_animation.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavBar extends StatelessWidget {
@@ -30,9 +31,17 @@ class NavBarDesktop extends StatelessWidget {
           width: 40,
         ),
         const Spacer(),
-        const Text(WebStrings.blog, style: TextStyling.navBarText),
+        HoverAnimation(builder: (isHovered) {
+          return Text(WebStrings.blog,
+              style: TextStyling.navBarText.copyWith(
+                  color: isHovered ? WebColors.orange : WebColors.grey));
+        }),
         const SizedBox(width: WebSize.s40),
-        const Text(WebStrings.projects, style: TextStyling.navBarText),
+        HoverAnimation(builder: (isHovered) {
+          return Text(WebStrings.projects,
+              style: TextStyling.navBarText.copyWith(
+                  color: isHovered ? WebColors.orange : WebColors.grey));
+        }),
         const Spacer(),
         Container(
           width: 78,

@@ -68,7 +68,7 @@ class IntroSectionDesktop extends StatelessWidget {
             ),
           ),
           Container(
-            constraints: const BoxConstraints(maxWidth: WebSize.s370),
+            constraints: const BoxConstraints(maxWidth: WebSize.s500),
             child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
