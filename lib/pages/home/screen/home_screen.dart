@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/constants/constants.dart';
 import 'package:my_portfolio/constants/sizes.dart';
 import 'package:my_portfolio/pages/home/components/about_section.dart';
 import 'package:my_portfolio/pages/home/components/blogs_section.dart';
@@ -14,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: WebColors.light,
+        backgroundColor: Theme.of(context).primaryColor,
         body: Center(
           child: Container(
             constraints: const BoxConstraints(maxWidth: WebSize.s1920),

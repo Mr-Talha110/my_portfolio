@@ -159,12 +159,11 @@ class IntroSectionMobile extends StatelessWidget {
         Row(
           children: [
             ...List.generate(
-              WebIcons.socialIcons.length,
-              (index) => SvgPicture.asset(
-                WebIcons.socialIcons[index],
-                width: WebSize.s32,
-              ).paddingRight(WebSize.s24),
-            )
+                WebIcons.socialIcons.length,
+                (index) => SvgPicture.asset(
+                      WebIcons.socialIcons[index],
+                      width: WebSize.s32,
+                    ).paddingRight(WebSize.s24))
           ],
         ),
       ],
