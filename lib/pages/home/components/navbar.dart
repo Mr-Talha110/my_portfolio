@@ -55,6 +55,6 @@ class NavBarMobile extends StatelessWidget {
     return Align(
       alignment: Alignment.topLeft,
       child: Image.asset(AssetRef.logo, width: WebSize.s42),
-    ).paddingHorizontalTop(horizontal: 24, top: 36);
+    ).paddingHorizontalTop(horizontal: 24, top: 35);
   }
 }
