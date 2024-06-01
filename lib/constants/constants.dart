@@ -52,3 +52,9 @@ class WebFonts {
   static const String chillaxMedium = 'chillax-medium';
   static const String chillaxLight = 'chillax-light';
 }
+
+class SocialUrls {
+  static Uri githubUrl = Uri.parse('https://github.com/Mr-Talha110');
+  static Uri linkedInUrl =
+      Uri.parse('https://www.linkedin.com/in/talha-latif-93b9191b5/');
+}

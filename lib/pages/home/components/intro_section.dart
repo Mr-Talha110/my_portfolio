@@ -7,6 +7,7 @@ import 'package:my_portfolio/constants/styling.dart';
 import 'package:my_portfolio/constants/web_strings.dart';
 import 'package:my_portfolio/widgets/web_button.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class IntroSection extends StatelessWidget {
   const IntroSection({super.key});
@@ -57,10 +58,14 @@ class IntroSectionDesktop extends StatelessWidget {
                   children: [
                     ...List.generate(
                       WebIcons.socialIcons.length,
-                      (index) => SvgPicture.asset(
-                        WebIcons.socialIcons[index],
-                        width: WebSize.s32,
-                      ).paddingRight(WebSize.s24),
+                      (index) => GestureDetector(
+                        behavior: HitTestBehavior.translucent,
+                        onTap: () => _socialLinks(index),
+                        child: SvgPicture.asset(
+                          WebIcons.socialIcons[index],
+                          width: WebSize.s32,
+                        ).paddingRight(WebSize.s24),
+                      ),
                     )
                   ],
                 ),
@@ -104,6 +109,27 @@ class IntroSectionDesktop extends StatelessWidget {
         ],
       ),
     ).paddingBottom(WebSize.s100);
+  }
+
+  _socialLinks(index) async {
+    switch (index) {
+      case 0:
+        if (!await launchUrl(SocialUrls.linkedInUrl)) {
+          throw Exception('Could not launch ${SocialUrls.linkedInUrl}');
+        }
+        break;
+      case 1:
+        if (!await launchUrl(SocialUrls.githubUrl)) {
+          throw Exception('Could not launch ${SocialUrls.githubUrl}');
+        }
+        break;
+      case 2:
+        if (!await launchUrl(SocialUrls.githubUrl)) {
+          throw Exception('Could not launch ${SocialUrls.githubUrl}');
+        }
+        break;
+      default:
+    }
   }
 }
 
