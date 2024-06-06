@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/constants/constants.dart';
 import 'package:my_portfolio/constants/extensions/padding.dart';
 import 'package:my_portfolio/constants/sizes.dart';
 import 'package:my_portfolio/constants/styling.dart';
 import 'package:my_portfolio/constants/web_strings.dart';
+import 'package:my_portfolio/services/theme_provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavBar extends StatelessWidget {
@@ -30,22 +32,33 @@ class NavBarDesktop extends StatelessWidget {
           width: 40,
         ),
         const Spacer(),
-        const Text(WebStrings.blog, style: TextStyling.navBarText),
+        Text(WebStrings.blog,
+            style: TextStyling.navBarText
+                .copyWith(color: Theme.of(context).colorScheme.secondary)),
         const SizedBox(width: WebSize.s40),
-        const Text(WebStrings.projects, style: TextStyling.navBarText),
+        Text(WebStrings.projects,
+            style: TextStyling.navBarText
+                .copyWith(color: Theme.of(context).colorScheme.secondary)),
         const Spacer(),
-        Switch.adaptive(
-          activeColor: WebColors.light,
-          value: true,
-          onChanged: (value) {},
+        Consumer(
+          builder: (context, ref, child) {
+            return Switch.adaptive(
+              activeColor: WebColors.light,
+              inactiveTrackColor: WebColors.lightgGrey,
+              activeTrackColor: WebColors.lightgGrey,
+              inactiveThumbImage: const AssetImage(WebIcons.lightIcon),
+              activeThumbImage: const AssetImage(WebIcons.darkIcon),
+              value:
+                  ref.read(themeModeProvider.notifier).state == ThemeMode.dark
+                      ? true
+                      : false,
+              onChanged: (_) {
+                ref.read(themeModeProvider.notifier).update((state) =>
+                    state == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark);
+              },
+            );
+          },
         )
-        // Container(
-        //   width: 78,
-        //   height: 40,
-        //   decoration: const BoxDecoration(
-        //       color: WebColors.lightgGrey,
-        //       borderRadius: BorderRadius.all(Radius.circular(WebSize.s40))),
-        // )
       ],
     ).paddingHorizontalTopBottom(
         horizontal: WebSize.s104, top: WebSize.s50, bottom: WebSize.s80);

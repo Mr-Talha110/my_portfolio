@@ -55,7 +55,7 @@ class AboutSectionDesktop extends StatelessWidget {
                 const SizedBox(height: WebSize.s8),
                 SelectableText(WebStrings.whyHireMe,
                     style: TextStyling.blueTextHome
-                        .copyWith(color: WebColors.white)),
+                        .copyWith(color: WebColors.light)),
                 const SizedBox(height: WebSize.s32),
                 SelectableText(WebStrings.whyHireMeDescp,
                     style: TextStyling.descpText

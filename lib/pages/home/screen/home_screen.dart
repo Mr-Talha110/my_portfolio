@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: Center(
           child: Container(
             constraints: const BoxConstraints(maxWidth: WebSize.s1920),

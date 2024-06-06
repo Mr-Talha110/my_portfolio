@@ -5,9 +5,9 @@ import 'package:my_portfolio/constants/extensions/padding.dart';
 import 'package:my_portfolio/constants/sizes.dart';
 import 'package:my_portfolio/constants/styling.dart';
 import 'package:my_portfolio/constants/web_strings.dart';
+import 'package:my_portfolio/pages/home/repository/home_repository.dart';
 import 'package:my_portfolio/widgets/web_button.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class IntroSection extends StatelessWidget {
   const IntroSection({super.key});
@@ -43,10 +43,9 @@ class IntroSectionDesktop extends StatelessWidget {
                   WebStrings.hiMsg,
                   style: TextStyling.orangeSmallText,
                 ),
-                const SelectableText(
-                  WebStrings.talha,
-                  style: TextStyling.blueText,
-                ),
+                SelectableText(WebStrings.talha,
+                    style: TextStyling.blueText.copyWith(
+                        color: Theme.of(context).colorScheme.primary)),
                 const SizedBox(height: WebSize.s24),
                 Container(
                   width: WebSize.s80,
@@ -60,9 +59,12 @@ class IntroSectionDesktop extends StatelessWidget {
                       WebIcons.socialIcons.length,
                       (index) => GestureDetector(
                         behavior: HitTestBehavior.translucent,
-                        onTap: () => _socialLinks(index),
+                        onTap: () => HomeRepository().socialLinks(index),
                         child: SvgPicture.asset(
                           WebIcons.socialIcons[index],
+                          colorFilter: ColorFilter.mode(
+                              Theme.of(context).colorScheme.primary,
+                              BlendMode.srcIn),
                           width: WebSize.s32,
                         ).paddingRight(WebSize.s24),
                       ),
@@ -74,32 +76,34 @@ class IntroSectionDesktop extends StatelessWidget {
           ),
           Container(
             constraints: const BoxConstraints(maxWidth: WebSize.s500),
-            child: const Column(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SelectableText(
                   WebStrings.homeDescp,
-                  style: TextStyling.blueTextHome,
+                  style: TextStyling.blueTextHome
+                      .copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
-                SizedBox(height: WebSize.s32),
-                SelectableText(
+                const SizedBox(height: WebSize.s32),
+                const SelectableText(
                   WebStrings.homeDescpDetails,
                   style: TextStyling.descpText,
                 ),
-                SizedBox(height: WebSize.s32),
+                const SizedBox(height: WebSize.s32),
                 Row(
                   children: [
-                    WebButton(
+                    const WebButton(
                       bgColor: WebColors.orange,
                       title: WebStrings.reachMe,
                     ),
-                    SizedBox(width: WebSize.s10),
+                    const SizedBox(width: WebSize.s10),
                     WebButton(
                       isIcon: true,
                       icon: WebIcons.downloadIcon,
                       title: WebStrings.downloadCV,
+                      iconColor: Theme.of(context).colorScheme.primary,
                       noElevation: true,
-                      textColor: WebColors.black,
+                      textColor: Theme.of(context).colorScheme.primary,
                     ),
                   ],
                 )
@@ -109,27 +113,6 @@ class IntroSectionDesktop extends StatelessWidget {
         ],
       ),
     ).paddingBottom(WebSize.s100);
-  }
-
-  _socialLinks(index) async {
-    switch (index) {
-      case 0:
-        if (!await launchUrl(SocialUrls.linkedInUrl)) {
-          throw Exception('Could not launch ${SocialUrls.linkedInUrl}');
-        }
-        break;
-      case 1:
-        if (!await launchUrl(SocialUrls.githubUrl)) {
-          throw Exception('Could not launch ${SocialUrls.githubUrl}');
-        }
-        break;
-      case 2:
-        if (!await launchUrl(SocialUrls.githubUrl)) {
-          throw Exception('Could not launch ${SocialUrls.githubUrl}');
-        }
-        break;
-      default:
-    }
   }
 }
 
@@ -157,7 +140,9 @@ class IntroSectionMobile extends StatelessWidget {
         const SizedBox(height: WebSize.s16),
         SelectableText(
           WebStrings.homeDescp,
-          style: TextStyling.blueTextHome.copyWith(fontSize: WebSize.s30),
+          style: TextStyling.blueTextHome.copyWith(
+              fontSize: WebSize.s30,
+              color: Theme.of(context).colorScheme.primary),
         ),
         const SizedBox(height: WebSize.s32),
         const SelectableText(
@@ -186,10 +171,17 @@ class IntroSectionMobile extends StatelessWidget {
           children: [
             ...List.generate(
                 WebIcons.socialIcons.length,
-                (index) => SvgPicture.asset(
-                      WebIcons.socialIcons[index],
-                      width: WebSize.s32,
-                    ).paddingRight(WebSize.s24))
+                (index) => GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () => HomeRepository().socialLinks(index),
+                      child: SvgPicture.asset(
+                        WebIcons.socialIcons[index],
+                        width: WebSize.s32,
+                        colorFilter: ColorFilter.mode(
+                            Theme.of(context).colorScheme.primary,
+                            BlendMode.srcIn),
+                      ).paddingRight(WebSize.s24),
+                    ))
           ],
         ),
       ],

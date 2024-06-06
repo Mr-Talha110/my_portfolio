@@ -31,6 +31,8 @@ class WebIcons {
   static const String brushIcon = 'assets/icons/brush.svg';
   static const String emailIcon = 'assets/icons/email.svg';
   static const String rightCircleIcon = 'assets/icons/right-circle.svg';
+  static const String lightIcon = 'assets/icons/light-icon.png';
+  static const String darkIcon = 'assets/icons/dark-icon.png';
   static const List<String> socialIcons = [
     'assets/icons/linkedin.svg',
     'assets/icons/github.svg',

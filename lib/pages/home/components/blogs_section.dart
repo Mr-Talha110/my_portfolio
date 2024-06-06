@@ -35,12 +35,12 @@ class BlogSectionDesktop extends StatelessWidget {
         isMobile
             ? Wrap(
                 crossAxisAlignment: WrapCrossAlignment.end,
-                children: blogChildren(),
+                children: blogChildren(context),
               )
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
-                children: blogChildren(),
+                children: blogChildren(context),
               ),
         const SizedBox(height: WebSize.s48),
         Align(
@@ -81,7 +81,7 @@ final List<BlogModel> blogs = [
       title: 'October 9th, 2022 — 7 min read')
 ];
 
-List<Widget> blogChildren() {
+List<Widget> blogChildren(context) {
   return [
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,8 +89,9 @@ List<Widget> blogChildren() {
         const SelectableText(WebStrings.blog,
             style: TextStyling.orangeLightText),
         const SizedBox(height: WebSize.s8),
-        const SelectableText(WebStrings.fintMyLatestWriting,
-                style: TextStyling.blueTextHome)
+        SelectableText(WebStrings.fintMyLatestWriting,
+                style: TextStyling.blueTextHome
+                    .copyWith(color: Theme.of(context).colorScheme.primary))
             .paddingBottom(WebSize.s24)
       ],
     ),

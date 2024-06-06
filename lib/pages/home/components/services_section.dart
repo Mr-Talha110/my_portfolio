@@ -45,9 +45,10 @@ class ServicesSectionDesktop extends StatelessWidget {
                     style: TextStyling.orangeSmallText
                         .copyWith(fontSize: WebSize.s18)),
                 const SizedBox(height: WebSize.s8),
-                const SelectableText(
+                SelectableText(
                   WebStrings.bestSolution,
-                  style: TextStyling.blueTextHome,
+                  style: TextStyling.blueTextHome
+                      .copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 const SizedBox(height: WebSize.s32),
                 const SelectableText(

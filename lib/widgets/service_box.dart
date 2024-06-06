@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_portfolio/constants/constants.dart';
 import 'package:my_portfolio/constants/sizes.dart';
 import 'package:my_portfolio/constants/styling.dart';
 
@@ -26,7 +25,7 @@ class ServiceBox extends StatelessWidget {
             borderRadius: const BorderRadius.all(Radius.circular(WebSize.s32)),
             child: Container(
               decoration: BoxDecoration(
-                  color: WebColors.white,
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(WebSize.s32)),
               padding: const EdgeInsets.only(
                   left: WebSize.s32,
@@ -38,7 +37,8 @@ class ServiceBox extends StatelessWidget {
                 children: [
                   SelectableText(
                     title,
-                    style: TextStyling.blueTitleText,
+                    style: TextStyling.blueTitleText
+                        .copyWith(color: Theme.of(context).colorScheme.primary),
                   ),
                   const SizedBox(height: WebSize.s24),
                   SelectableText(
@@ -55,6 +55,8 @@ class ServiceBox extends StatelessWidget {
           child: SvgPicture.asset(
             icon,
             width: WebSize.s64,
+            colorFilter: ColorFilter.mode(
+                Theme.of(context).primaryColor, BlendMode.srcIn),
           ),
         ),
       ],

@@ -29,15 +29,15 @@ class FooterDesktop extends StatelessWidget {
           horizontal: WebSize.s104, vertical: WebSize.s48),
       child: Column(
         children: [
-          const Divider(color: WebColors.dividerGrey),
+          Divider(color: Theme.of(context).colorScheme.onPrimary),
           const SizedBox(height: WebSize.s32),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SelectableText(
                 WebStrings.rightsReserved,
-                style:
-                    TextStyling.descpText.copyWith(color: WebColors.darkGrey),
+                style: TextStyling.descpText
+                    .copyWith(color: Theme.of(context).colorScheme.onPrimary),
               ),
               Row(
                 children: [
@@ -45,6 +45,9 @@ class FooterDesktop extends StatelessWidget {
                     WebIcons.socialIcons.length,
                     (index) => SvgPicture.asset(
                       WebIcons.socialIcons[index],
+                      colorFilter: ColorFilter.mode(
+                          Theme.of(context).colorScheme.primary,
+                          BlendMode.srcIn),
                       width: WebSize.s32,
                     ).paddingRight(WebSize.s24),
                   )
@@ -68,14 +71,14 @@ class FooterMobile extends StatelessWidget {
           horizontal: WebSize.s24, vertical: WebSize.s48),
       child: Column(
         children: [
-          const Divider(color: WebColors.dividerGrey),
+          Divider(color: Theme.of(context).colorScheme.onPrimary),
           const SizedBox(height: WebSize.s32),
           Wrap(
             children: [
               SelectableText(
                 WebStrings.rightsReserved,
-                style:
-                    TextStyling.descpText.copyWith(color: WebColors.darkGrey),
+                style: TextStyling.descpText
+                    .copyWith(color: Theme.of(context).colorScheme.onPrimary),
               ).paddingBottom(WebSize.s16),
               Row(
                 children: [
@@ -84,6 +87,9 @@ class FooterMobile extends StatelessWidget {
                     (index) => SvgPicture.asset(
                       WebIcons.socialIcons[index],
                       width: WebSize.s32,
+                      colorFilter: ColorFilter.mode(
+                          Theme.of(context).colorScheme.primary,
+                          BlendMode.srcIn),
                     ).paddingRight(WebSize.s24),
                   )
                 ],

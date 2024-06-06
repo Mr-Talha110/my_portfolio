@@ -41,7 +41,7 @@ class Blog extends StatelessWidget {
           SelectableText(
             blog.description,
             style: TextStyling.blueTitleText.copyWith(
-              color: WebColors.grey,
+              color: Theme.of(context).canvasColor,
             ),
           ),
         ],

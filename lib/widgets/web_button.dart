@@ -12,9 +12,11 @@ class WebButton extends StatelessWidget {
   final bool isIcon;
   final String? icon;
   final Color? borderColor;
+  final Color? iconColor;
   const WebButton(
       {super.key,
       this.icon,
+      this.iconColor,
       this.borderColor,
       this.bgColor,
       this.isIcon = false,
@@ -43,7 +45,11 @@ class WebButton extends StatelessWidget {
               visible: isIcon,
               child: Row(
                 children: [
-                  SvgPicture.asset(icon ?? ''),
+                  SvgPicture.asset(
+                    icon ?? '',
+                    colorFilter: ColorFilter.mode(
+                        iconColor ?? WebColors.white, BlendMode.srcIn),
+                  ),
                   const SizedBox(width: WebSize.s6)
                 ],
               )),
