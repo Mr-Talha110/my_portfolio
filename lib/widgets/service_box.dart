@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_portfolio/constants/constants.dart';
 import 'package:my_portfolio/constants/sizes.dart';
 import 'package:my_portfolio/constants/styling.dart';
 
@@ -21,6 +22,7 @@ class ServiceBox extends StatelessWidget {
           width: WebSize.s280,
           padding: const EdgeInsets.symmetric(vertical: WebSize.s30),
           child: Material(
+            color: WebColors.transparent,
             elevation: 5.0,
             borderRadius: const BorderRadius.all(Radius.circular(WebSize.s32)),
             child: Container(
