@@ -49,17 +49,26 @@ class AboutSectionDesktop extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SelectableText(WebStrings.about,
-                    style: TextStyling.orangeSmallText
-                        .copyWith(fontSize: WebSize.s18)),
+                SelectableText(
+                  WebStrings.about,
+                  style: TextStyling.orangeSmallText.copyWith(
+                    fontSize: WebSize.s18,
+                  ),
+                ),
                 const SizedBox(height: WebSize.s8),
-                SelectableText(WebStrings.whyHireMe,
-                    style: TextStyling.blueTextHome
-                        .copyWith(color: WebColors.light)),
+                SelectableText(
+                  WebStrings.whyHireMe,
+                  style: TextStyling.blueTextHome.copyWith(
+                    color: WebColors.light,
+                  ),
+                ),
                 const SizedBox(height: WebSize.s32),
-                SelectableText(WebStrings.whyHireMeDescp,
-                    style: TextStyling.descpText
-                        .copyWith(color: WebColors.baseGrey)),
+                SelectableText(
+                  WebStrings.whyHireMeDescp,
+                  style: TextStyling.descpText.copyWith(
+                    color: WebColors.baseGrey,
+                  ),
+                ),
               ],
             ),
           )

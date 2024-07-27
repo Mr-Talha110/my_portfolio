@@ -33,11 +33,10 @@ class ServicesSectionDesktop extends StatelessWidget {
           right: isMobile ? WebSize.s24 : WebSize.s104,
           bottom: WebSize.s32),
       padding: const EdgeInsets.symmetric(vertical: WebSize.s48),
-      child: Wrap(
-        alignment: WrapAlignment.spaceBetween,
+      child: Row(
+        // alignment: WrapAlignment.spaceBetween,
         children: [
-          SizedBox(
-            width: WebSize.s474,
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -61,8 +60,8 @@ class ServicesSectionDesktop extends StatelessWidget {
                   style: TextStyling.greyDescpText,
                 )
               ],
-            ),
-          ).paddingBottom(WebSize.s50),
+            ).paddingBottom(WebSize.s50),
+          ),
           Visibility(
               visible: !isMobile, child: const SizedBox(width: WebSize.s68)),
           isMobile

@@ -29,7 +29,9 @@ class IntroSectionDesktop extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(
-          horizontal: WebSize.s104, vertical: WebSize.s48),
+        horizontal: WebSize.s104,
+        vertical: WebSize.s48,
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,9 +45,12 @@ class IntroSectionDesktop extends StatelessWidget {
                   WebStrings.hiMsg,
                   style: TextStyling.orangeSmallText,
                 ),
-                SelectableText(WebStrings.talha,
-                    style: TextStyling.blueText.copyWith(
-                        color: Theme.of(context).colorScheme.primary)),
+                SelectableText(
+                  WebStrings.talha,
+                  style: TextStyling.blueText.copyWith(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
                 const SizedBox(height: WebSize.s24),
                 Container(
                   width: WebSize.s80,
@@ -63,8 +68,9 @@ class IntroSectionDesktop extends StatelessWidget {
                         child: SvgPicture.asset(
                           WebIcons.socialIcons[index],
                           colorFilter: ColorFilter.mode(
-                              Theme.of(context).colorScheme.primary,
-                              BlendMode.srcIn),
+                            Theme.of(context).colorScheme.primary,
+                            BlendMode.srcIn,
+                          ),
                           width: WebSize.s32,
                         ).paddingRight(WebSize.s24),
                       ),

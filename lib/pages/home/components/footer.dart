@@ -4,7 +4,9 @@ import 'package:my_portfolio/constants/constants.dart';
 import 'package:my_portfolio/constants/extensions/padding.dart';
 import 'package:my_portfolio/constants/styling.dart';
 import 'package:my_portfolio/constants/web_strings.dart';
+import 'package:my_portfolio/pages/home/repository/home_repository.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
 import '../../../constants/sizes.dart';
 
 class Footer extends StatelessWidget {
@@ -43,13 +45,18 @@ class FooterDesktop extends StatelessWidget {
                 children: [
                   ...List.generate(
                     WebIcons.socialIcons.length,
-                    (index) => SvgPicture.asset(
-                      WebIcons.socialIcons[index],
-                      colorFilter: ColorFilter.mode(
+                    (index) => GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () => HomeRepository().socialLinks(index),
+                      child: SvgPicture.asset(
+                        WebIcons.socialIcons[index],
+                        colorFilter: ColorFilter.mode(
                           Theme.of(context).colorScheme.primary,
-                          BlendMode.srcIn),
-                      width: WebSize.s32,
-                    ).paddingRight(WebSize.s24),
+                          BlendMode.srcIn,
+                        ),
+                        width: WebSize.s32,
+                      ).paddingRight(WebSize.s24),
+                    ),
                   )
                 ],
               ),
@@ -84,13 +91,18 @@ class FooterMobile extends StatelessWidget {
                 children: [
                   ...List.generate(
                     WebIcons.socialIcons.length,
-                    (index) => SvgPicture.asset(
-                      WebIcons.socialIcons[index],
-                      width: WebSize.s32,
-                      colorFilter: ColorFilter.mode(
+                    (index) => GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () => HomeRepository().socialLinks(index),
+                      child: SvgPicture.asset(
+                        WebIcons.socialIcons[index],
+                        colorFilter: ColorFilter.mode(
                           Theme.of(context).colorScheme.primary,
-                          BlendMode.srcIn),
-                    ).paddingRight(WebSize.s24),
+                          BlendMode.srcIn,
+                        ),
+                        width: WebSize.s32,
+                      ).paddingRight(WebSize.s24),
+                    ),
                   )
                 ],
               ),
