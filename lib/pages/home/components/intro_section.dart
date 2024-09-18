@@ -36,8 +36,7 @@ class IntroSectionDesktop extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(
-            width: WebSize.s200,
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -80,8 +79,7 @@ class IntroSectionDesktop extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            constraints: const BoxConstraints(maxWidth: WebSize.s500),
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

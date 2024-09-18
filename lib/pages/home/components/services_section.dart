@@ -33,8 +33,7 @@ class ServicesSectionDesktop extends StatelessWidget {
           right: isMobile ? WebSize.s24 : WebSize.s104,
           bottom: WebSize.s32),
       padding: const EdgeInsets.symmetric(vertical: WebSize.s48),
-      child: Row(
-        // alignment: WrapAlignment.spaceBetween,
+      child: Wrap(
         children: [
           Expanded(
             child: Column(
@@ -55,45 +54,34 @@ class ServicesSectionDesktop extends StatelessWidget {
                   style: TextStyling.descpText,
                 ),
                 const SizedBox(height: WebSize.s8),
-                const SelectableText(
+                SelectableText(
                   WebStrings.rightPlace,
-                  style: TextStyling.greyDescpText,
+                  style: TextStyling.greyDescpText
+                      .copyWith(color: Theme.of(context).canvasColor),
                 )
               ],
             ).paddingBottom(WebSize.s50),
           ),
-          Visibility(
-              visible: !isMobile, child: const SizedBox(width: WebSize.s68)),
-          isMobile
-              ? const Align(
-                  alignment: Alignment.center,
-                  child: Wrap(
-                    children: [
-                      ServiceBox(
-                          descp: WebStrings.appDeveloperDescp,
-                          title: WebStrings.appDeveloper,
-                          icon: WebIcons.pcIcon),
-                      SizedBox(width: WebSize.s10),
-                      ServiceBox(
-                          descp: WebStrings.uiDesignerDescp,
-                          title: WebStrings.uiDesigner,
-                          icon: WebIcons.brushIcon)
-                    ],
-                  ),
-                )
-              : const Wrap(
-                  children: [
-                    ServiceBox(
-                        descp: WebStrings.appDeveloperDescp,
-                        title: WebStrings.appDeveloper,
-                        icon: WebIcons.pcIcon),
-                    SizedBox(width: WebSize.s40),
-                    ServiceBox(
-                        descp: WebStrings.uiDesignerDescp,
-                        title: WebStrings.uiDesigner,
-                        icon: WebIcons.brushIcon)
-                  ],
-                )
+          const Wrap(
+            children: [
+              ServiceBox(
+                  descp: WebStrings.appDeveloperDescp,
+                  title: WebStrings.appDeveloper,
+                  icon: WebIcons.pcIcon),
+              SizedBox(width: WebSize.s40),
+              ServiceBox(
+                descp: WebStrings.uiDesignerDescp,
+                title: WebStrings.uiDesigner,
+                icon: WebIcons.brushIcon,
+              ),
+              SizedBox(width: WebSize.s40),
+              ServiceBox(
+                descp: WebStrings.uiDesignerDescp,
+                title: WebStrings.uiDesigner,
+                icon: WebIcons.brushIcon,
+              ),
+            ],
+          )
         ],
       ),
     );

@@ -36,7 +36,6 @@ class WebIcons {
   static const List<String> socialIcons = [
     'assets/icons/linkedin.svg',
     'assets/icons/github.svg',
-    'assets/icons/web.svg',
   ];
 }
 
